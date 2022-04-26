@@ -56,7 +56,7 @@
 
  .bg-light,
  .btn-light {
-     background-color: var(--primary-color);
+     background-color: var(--light-color);
      color: #333;
  }
 
