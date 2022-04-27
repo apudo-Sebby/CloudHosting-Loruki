@@ -6,6 +6,8 @@
     --secondary-color: #1c3fa8;
     --dark-color: #002240;
     --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
 }
 
 * {
@@ -41,6 +43,13 @@ p {
 
 img {
     width: 100%;
+}
+
+code, 
+pre {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
 }
 
 /* Navbar styling */
@@ -191,7 +200,8 @@ h1.logo {
 }
 
 /* Features */
-.features-head img {
+.features-head img, 
+.docs-head img {
     width: 200px;
     justify-self: flex-end;
 }
@@ -217,6 +227,27 @@ h1.logo {
     grid-column: 1 / span 2;
 }
 
+/* Docs */
+.docs-main h3 {
+    margin: 20px 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: solid #ccc 1px;
+}
+
+.docs-main a:hover {
+    font-weight: bold;
+}
+
 /* Footer */
 .footer .social a {
     margin: 0 10px;
@@ -228,7 +259,9 @@ h1.logo {
     .showcase .grid,
     .stats .grid,
     .cli .grid,
-    .cloud .grid {
+    .cloud .grid 
+    .features-main .grid,
+    .docs-main .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
@@ -249,6 +282,23 @@ h1.logo {
     .cli .grid > *:first-child {
         grid-column: 1;    
         grid-row: 1;    
+    }
+
+    .features-head,
+    .features-sub-head,
+    .docs-head {
+        text-align: center;
+    }
+
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img{
+        justify-self: center;
+    }
+
+    .features-main .grid > *:first-child,
+    .features-main .grid > *:nth-child(2) {
+        grid-column: 1;
     }
 }
 
